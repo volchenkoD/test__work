@@ -1,0 +1,521 @@
+/* сброс стандартныч стилей */
+body,
+div,
+h2,
+p,
+ul,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* блок объертка */
+.wrapper {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: auto auto;
+}
+
+/* логотип */
+.logo {
+    background-color: #29313c;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column: 1/ -1;
+    height: 66px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding-top: 15px;
+    padding-left: 27px;
+}
+
+/* тект логотипа */
+.logo>svg:nth-child(2) {
+    position: relative;
+    top: -5px;
+    left: 5px;
+}
+
+/* основные стили навигационной панели */
+nav {
+    background-color: #323a45;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    width: 80px;
+    height: 1024px;
+}
+
+/* изменение элементов списка */
+nav>ul>li {
+    list-style: none;
+
+    padding: 26px 31px;
+
+}
+
+/* стили ссылок навигационной панели */
+a {
+    display: inline-block;
+}
+
+/* фокусировка на элементе */
+a:focus {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #282e37;
+    margin-left: -15px;
+    padding-top: 20px;
+}
+
+a:focus>svg {
+    position: relative;
+    top: -10px;
+    left: 15px;
+}
+
+/* основное содержание */
+.main-content {
+    grid-row: 1/-1;
+    grid-column: 2/ -1;
+    width: 100%;
+    background-color: #f4f9fb;
+}
+
+/*  блок с общей информацией */
+.about {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*  кнопки блока */
+.favorites {
+    width: 116px;
+    height: 36px;
+    border-radius: 3px;
+    border: 1px solid #dbe4e7;
+    background-color: #ffffff;
+    color: #475364;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.favorites>svg {
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+}
+
+/* добавление нового пользователя */
+.new__user {
+    position: relative;
+    top: -2px;
+    width: 181px;
+    height: 36px;
+    border-radius: 3px;
+
+    line-height: 11px;
+}
+
+.new__user:hover {
+    background-color: #386bf2;
+    color: #ffffff;
+}
+
+.new__user>svg {
+    top: 2px;
+}
+
+/* блок с соискателями */
+.table {
+    width: 90vw;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/* основные стили блока соискатели */
+.table__row {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
+    align-items: center;
+    border-bottom: 1px solid #f4f9fb;
+    padding: 10px;
+    color: #475364;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+/* общие стили для каждой ячейки */
+.unit {
+    width: 240px;
+    text-transform: none;
+}
+
+.unit:last-child {
+    width: 140px;
+}
+
+/* ячейка с общей информацией о пользователе */
+.about__user {
+    display: flex;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+/* блок с телефоном */
+.about__tel {
+    display: flex;
+}
+
+/*  информация о номере */
+.about__tel-info {
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+/*  изображение блока */
+.img {
+    width: 40px;
+    height: 40px;
+    background-color: #e8eff1;
+    border-radius: 100%;
+    position: relative;
+    left: -8px;
+}
+
+.img>svg {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+/*  блок с неполной информацией */
+.unit__left {
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+
+.about__user>div {
+    margin: 7px 0px 0 10px;
+}
+
+/*  общие элементы с текстом */
+.jobs,
+.another,
+.point {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #8ea4b5;
+    text-transform: none;
+}
+
+/*  общий класс для незаполненой информации */
+.not__info {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+.not__info-value {
+    margin-top: 5px;
+}
+
+/*  фон для картинок телефона и почты */
+.about__tel-bg,
+.about__mail-bg {
+    width: 36px;
+    height: 36px;
+    border-radius: 3px;
+    background-color: #e8eff1;
+}
+
+.about__tel-one {
+    margin-top: 12px;
+}
+
+.about__tel-bg>svg {
+    position: relative;
+    top: 11px;
+    left: 11px;
+
+}
+
+.about__mail-bg>svg {
+    position: relative;
+    top: 13px;
+    left: 11px;
+}
+
+.icons {
+    display: flex;
+}
+
+/*  кнопки-закладки */
+.copy,
+.load,
+.bookmark {
+    width: 36px;
+    height: 36px;
+    border-radius: 3px;
+    border: 1px solid #dbe4e7;
+    background-color: #ffffff;
+    margin-left: 10px;
+}
+
+.copy>svg,
+.load>svg {
+    margin-top: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.bookmark>svg {
+    margin-top: 10px;
+    margin-left: 11px;
+    cursor: pointer;
+}
+
+/*  кнопка показать еще соискателей */
+.also {
+    border: none;
+    background-color: #fff;
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+    color: #475364;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 11px;
+    text-transform: uppercase;
+    padding-block-start: 13px;
+    padding-block-end: 13px;
+}
+
+/* Поле формы */
+.modal {
+    display: none;
+    grid-column: -1/-9;
+    grid-row: 1/-1;
+    width: 650px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    position: relative;
+    right: -24px;
+}
+
+/*  стили для разделов */
+fieldset {
+    border: none;
+    margin-left: 10px;
+    border-bottom: 2px solid #f4f9fb;
+    padding-block-end: 20px;
+}
+
+/* Заголовок формы */
+.modal__title {
+    padding-left: 25px;
+    padding-block-start: 20px;
+    color: #475364;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f4f9fb;
+    padding-block-end: 20px;
+}
+
+/* Заголовки разделов */
+legend {
+    color: #475364;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    padding-block-start: 20px;
+
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    border: 1px solid #dce5ea;
+    background-color: #f4f9fb;
+}
+
+/*  изменение поведени поля с загрузкой фотографии */
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input__file {
+    width: 600px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dce5ea;
+    background-color: #f4f9fb;
+}
+
+.input__file>span {
+    color: #8ea4b5;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+input[type="file"]+label {
+    width: 104px;
+    height: 26px;
+    border-radius: 3px;
+    background-color: #386bf2;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: baseline;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+input[type="file"]+label::before {
+    content: 'Выберите файл';
+    position: relative;
+    top: 8px;
+}
+
+/*  текст для плейсхолдера */
+input::placeholder,
+select {
+    color: #8ea4b5;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+label>p,
+fieldset>p,
+fieldset>span,
+fieldset>div>p {
+    color: #8ea4b5;
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    padding-bottom: 2px;
+}
+
+fieldset>span {
+    text-decoration: underline;
+}
+
+/*  блок с оценками */
+.points {
+    display: inline-block;
+}
+
+.star {
+    float: left;
+    border-bottom: none;
+    display: inline;
+    margin-left: 120px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.star:first-of-type {
+    margin-left: 0px;
+}
+
+.star>h3 {
+    color: #475364;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 11px;
+    text-transform: uppercase;
+}
+
+.points::after {
+    clear: both;
+}
+
+/*  кнопки формы */
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons>button {
+    margin: 20px;
+    width: 50%;
+}
+
+.buttons>.favorites {
+    margin-left: 5px;
+}
+
+/* закрытие формы */
+.close {
+    display: none;
+    grid-column: -9/-9;
+    grid-row: 1/-1;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: relative;
+    right: 20px;
+}
+
+.close>img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
